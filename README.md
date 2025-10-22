@@ -89,6 +89,7 @@ The initialization script (`init-sql.sql`) creates the following tables:
 
 - **categories**: Product categories
 - **products**: Product inventory with stock levels
+- **product_suppliers**: product_id, supplier_id
 - **suppliers**: Supplier information
 - **stock_movements**: Track inventory movements (IN/OUT/ADJUSTMENT)
 

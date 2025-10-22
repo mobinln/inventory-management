@@ -61,3 +61,15 @@ pre-commit-run: ## Run pre-commit on all files
 
 run-dev: ## Start development server
 	uv run python -m inventory_management.main
+
+migrate-create: ## Create a new migration
+	uv run alembic revision --autogenerate -m "$(message)"
+
+migrate-upgrade: ## Upgrade the database
+	uv run alembic upgrade head
+
+migrate-downgrade: ## Downgrade the database
+	uv run alembic downgrade -1
+
+migrate-history: ## Show the migration history
+	uv run alembic history
