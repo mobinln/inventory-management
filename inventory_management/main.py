@@ -20,17 +20,18 @@ app.add_middleware(
 
 
 @app.get("/")
-async def root():
+async def root() -> dict[str, str]:
     """Root endpoint."""
     return {"message": "Inventory Management API", "version": "0.1.0"}
 
 
 @app.get("/health")
-async def health_check():
+async def health_check() -> dict[str, str]:
     """Health check endpoint."""
     return {"status": "healthy"}
 
 
 if __name__ == "__main__":
     import uvicorn
+
     uvicorn.run("inventory_management.main:app", host="0.0.0.0", port=8000, reload=True)

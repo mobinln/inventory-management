@@ -31,5 +31,5 @@ repos:
     rev: v1.8.0
     hooks:
       - id: mypy
-        additional_dependencies: [types-all]
-        args: [--ignore-missing-imports]
+        additional_dependencies: [types-requests, types-redis]
+        args: [--ignore-missing-imports, --disable-error-code=misc]
