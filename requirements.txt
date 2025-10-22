@@ -1,0 +1,23 @@
+# Core dependencies
+fastapi
+uvicorn[standard]
+sqlalchemy
+alembic
+psycopg2-binary
+redis
+pydantic
+pydantic-settings
+python-multipart
+python-jose[cryptography]
+passlib[bcrypt]
+python-dotenv
+
+# Development dependencies
+pytest
+pytest-asyncio
+pytest-cov
+black
+isort
+flake8
+mypy
+pre-commit
