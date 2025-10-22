@@ -16,8 +16,5 @@ python-dotenv
 pytest
 pytest-asyncio
 pytest-cov
-black
-isort
-flake8
-mypy
+ruff
 pre-commit

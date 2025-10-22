@@ -17,16 +17,15 @@ test-cov: ## Run tests with coverage
 	uv run pytest --cov=inventory_management --cov-report=html --cov-report=term
 
 lint: ## Run linting
-	uv run flake8 inventory_management/
-	uv run mypy inventory_management/
+	uv run ruff check inventory_management/
 
 format: ## Format code
-	uv run black inventory_management/
-	uv run isort inventory_management/
+	uv run ruff format inventory_management/
+	uv run ruff check --fix inventory_management/
 
 format-check: ## Check code formatting
-	uv run black --check inventory_management/
-	uv run isort --check-only inventory_management/
+	uv run ruff format --check inventory_management/
+	uv run ruff check inventory_management/
 
 clean: ## Clean up temporary files
 	find . -type f -name "*.pyc" -delete
